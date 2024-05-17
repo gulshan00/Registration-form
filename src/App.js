@@ -296,6 +296,7 @@
 // export default App;
 
 
+
 import React, { useState, useEffect } from "react";
 
 const App = () => {
@@ -372,10 +373,10 @@ const App = () => {
     setEditIndex(index);
     setFormData(submittedData[index]);
   };
-
+  // max-w-screen-lg
   return (
-    <div className="container mx-auto max-w-screen-lg px-4 py-8 bg-gray-100">
-      <h1 className="text-4xl font-bold mb-6 text-blue-700">Registration Form</h1>
+    <div className="container mx-auto  px-4 py-8 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+      <h1 className="text-4xl font-bold mb-6 text-white">Registration Form</h1>
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
         <div className="mb-4">
           <label className="block mb-2 text-lg font-medium text-gray-700">Full Name:</label>
@@ -510,11 +511,11 @@ const App = () => {
           Submit
         </button>
       </form>
-      <h2 className="text-3xl font-semibold mt-8 text-blue-700">Submitted Data</h2>
+      <h2 className="text-3xl font-semibold mt-8 text-white">Submitted Data</h2>
       <div className="overflow-x-auto mb-48 mt-4">
         <table className="w-full bg-white shadow-md rounded-lg">
           <thead>
-            <tr className="bg-blue-200">
+            <tr className="bg-blue-500 text-white">
               <th className="px-4 py-2">Full Name</th>
               <th className="px-4 py-2">Email</th>
               <th className="px-4 py-2">Telephone</th>
@@ -527,7 +528,7 @@ const App = () => {
           </thead>
           <tbody>
             {submittedData.map((data, index) => (
-              <tr key={index} className="bg-white border-b">
+              <tr key={index} className="bg-gray-50 border-b">
                 <td className="border px-4 py-2">{data.fullName}</td>
                 <td className="border px-4 py-2">{data.email}</td>
                 <td className="border px-4 py-2">{data.telephone}</td>
@@ -553,3 +554,4 @@ const App = () => {
 };
 
 export default App;
+
